@@ -1,5 +1,11 @@
-
-
+# we use (if, elif, else) to make condition
+# to check equality between two variables (if var1 == var2)
+# to check not equality (if var1 != var2)
+# to compare between two variables (if var1 > var2, if var1 < var2, var1 >= var2, …)
+# to opposite condition (if not var1 > var2)
+# to aggregate between two or more condition (if var1 > var2 [and, or] var2 == var3)
+# use or: if one condition is true , then all the if statement will be true
+# use and: must be all condition be true, to execute the if statement
 
 x = 40
 y = 50
