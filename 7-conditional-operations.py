@@ -6,6 +6,13 @@
 # to aggregate between two or more condition (if var1 > var2 [and, or] var2 == var3)
 # use or: if one condition is true , then all the if statement will be true
 # use and: must be all condition be true, to execute the if statement
+# we can use also match statement to match condition
+# it is useful if there is a lot of condition: it is better than if statement it this situation
+# we can combine more than one condition at one case
+# we can make default statement if there is any condition happen
+# we can combine between it and if statement
+
+from datetime import datetime
 
 x = 40
 y = 50
@@ -38,3 +45,24 @@ for i in range(10):
         pass
     else:
         print(i)
+
+
+today = datetime.today()
+print(today)
+
+currentDay = today.day;
+currentMonth = today.month;
+print(currentDay)
+print(currentMonth)
+
+match currentDay:
+    case 1:
+        print('First of the month')
+    case 12 | 15 | 25:
+        print('Happy Day in the month')
+    case 28 if currentMonth == 2:
+        print('End of the month')
+    case 30 if currentMonth != 2:
+        print('End of the month')
+    case _:
+        print('A day in the month')
