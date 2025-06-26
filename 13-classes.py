@@ -31,9 +31,11 @@ communication.edit_name()
 print(type(communication.rate))
 
 class Person:
+    num_of_persons = 0
     def __init__(self, name: str, age: int):
         self.name = name
         self.age = age
+        Person.num_of_persons += 1
 
     def __str__(self):
         return f"Name: {self.name}, Age: {self.age}"
@@ -47,3 +49,4 @@ class Student(Person):
 
 student1 = Student("Ahmed", 15)
 print(student1)
+print(Person.num_of_persons)
